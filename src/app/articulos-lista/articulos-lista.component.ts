@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ArticulosFamilia} from '../modelos/articulofamilia'
-import {ArticulosFamilias} from '../articulosfamilia-colection'
+import {ArticulosFamilias} from '../modelos/articulosfamilia-colection'
 
 @Component({
   selector: 'app-articulos-lista',
@@ -9,11 +9,20 @@ import {ArticulosFamilias} from '../articulosfamilia-colection'
 })
 export class ArticulosListaComponent implements OnInit {
   listaArticulos: ArticulosFamilia[];
+  verGrilla = false;
+  mensajebtn = 'Mostrar Grilla'
 
   constructor() { }
 
   ngOnInit() {
     this.listaArticulos = ArticulosFamilias
+  }
+
+  MostrarGrilla(){
+    this.mensajebtn = this.verGrilla? 'Mostrar Grilla': 'Ocultar';
+   this.verGrilla = !this.verGrilla;
+   
+
   }
 
 }

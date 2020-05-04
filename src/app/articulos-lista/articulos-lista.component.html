@@ -1,4 +1,6 @@
-<table class="table table-striped">
+<input type='button' (click) = 'MostrarGrilla()' value = {{mensajebtn}}/>
+
+<table class="table table-striped" *ngIf='verGrilla'>
     <thead class="thead-inverse">
         <tr>
             <th>Id</th>
